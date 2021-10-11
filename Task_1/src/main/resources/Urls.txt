@@ -1,0 +1,79 @@
+	1) Register or Authenticate 
+	
+	Register : http://localhost:8080/registerNewUser
+	
+	Json Body:
+	{
+	  "userName":"",
+	  "userFirstName":"",
+	  "userLastName":"",
+	  "userEmail":"",
+	  "userPassword":""
+	}
+	
+	Authenticate : http://localhost:8080/authenticate -> Token Will Generate
+	
+	1) Admin 
+	Json Body:
+	{
+	  "userName":"admin123",
+	  "userPassword":"admin123"
+	}
+	
+	or
+	
+	{
+	  "userEmail":"admin@admin.com",
+	  "userPassword":"admin123"
+	}
+	
+	------
+	
+	Admin can view all bookings & also view booking by Id
+	
+	GET - http://localhost:8080/viewBookings
+	GET - http://localhost:8080/viewBooking/{id}
+	
+	2) User
+	Json Body:
+	{
+	  "userName":"Nishargi169",
+	  "userPassword":"nishu123"
+	}
+	
+	or
+	
+	{
+	  "userEmail":"nishargi123@gmail.com",
+	  "userPassword":"nishu123"
+	}
+	
+	------
+	
+	User can book the Hotel
+	
+	POST - http://localhost:8080/bookHotel
+	
+	Json Body:
+	{
+	    "id":"",
+	    "firstName":"",
+	    "lastName":"",
+	    "email":"",
+	    "mobile":"",
+	    "from":"",
+	    "to":"",
+	    "specialRequest":""
+	}
+	
+	3) If anyone wants to add a new role
+	
+	POST - http://localhost:8080/createNewRole
+	
+	Json Body:
+	{
+	    "roleName": "Manager",
+	    "roleDescription": "Manager Role"
+	}
+	
+	
